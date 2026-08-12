@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Recommendation App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>Book Recommendation App</h1>
+
+    <h2>Add Book</h2>
+
+    <input type="text" id="title" placeholder="Book Title">
+    <input type="text" id="author" placeholder="Author">
+    <input type="text" id="category" placeholder="Category">
+
+    <input type="number" id="rating"
+           min="1" max="5"
+           placeholder="Rating 1-5">
+
+    <button onclick="addBook()">Add Book</button>
+
+    <h2>Search Book</h2>
+
+    <input type="text" id="search" placeholder="Search Book">
+
+    <button onclick="searchBook()">Search</button>
+
+    <button onclick="showBooks()">Show All</button>
+
+    <h2>Books</h2>
+
+    <div id="bookList"></div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

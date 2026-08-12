@@ -1,0 +1,508 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #f7f4ef;
+    color: #302a26;
+    min-height: 100%;
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* =========================
+APP LAYOUT
+========================= */
+
+.app {
+    min-height: 100vh;
+    height: auto;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+}
+
+/* =========================
+SIDEBAR
+========================= */
+
+.sidebar {
+    background: #302a26;
+    color: white;
+    padding: 32px 25px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo {
+    font-family: "Playfair Display", serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.logo span {
+    color: #c48c64;
+}
+
+.tagline {
+    color: #aaa19b;
+    font-size: 12px;
+    line-height: 1.6;
+    margin-top: 10px;
+}
+
+/* Mini book */
+
+.sidebar-book {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mini-book {
+    width: 140px;
+    height: 200px;
+    background: linear-gradient(135deg, #795039, #b37a56);
+    box-shadow: 15px 20px 30px rgba(0,0,0,0.3);
+    transform: rotate(-6deg);
+    text-align: center;
+    padding-top: 35px;
+    color: #f9eadc;
+}
+
+.mini-book span {
+    font-size: 25px;
+}
+
+.mini-book h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 22px;
+    margin-top: 25px;
+    line-height: 1.1;
+}
+
+.mini-book small {
+    display: block;
+    font-size: 7px;
+    letter-spacing: 3px;
+    margin-top: 25px;
+}
+
+.quote {
+    font-family: "Playfair Display", serif;
+    color: #b9afa7;
+    font-size: 12px;
+    line-height: 1.7;
+    font-style: italic;
+    text-align: center;
+}
+
+.copyright {
+    color: #716963;
+    font-size: 10px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* =========================
+MAIN
+========================= */
+
+.main {
+    padding: 35px 45px;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+/* =========================
+TOP
+========================= */
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.eyebrow {
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    font-weight: 700;
+    color: #b07a58;
+    margin-bottom: 5px;
+}
+
+.top h1 {
+    font-family: "Playfair Display", serif;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.top h1 span {
+    color: #b47b59;
+    font-style: italic;
+}
+
+/* Search */
+
+.search {
+    width: 260px;
+    height: 43px;
+    background: white;
+    border: 1px solid #e5ddd5;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    gap: 8px;
+}
+
+.search span {
+    color: #b47b59;
+    font-size: 20px;
+}
+
+.search input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 12px;
+    background: transparent;
+}
+
+/* =========================
+ADD BOX
+========================= */
+
+.add-box {
+    background: #302a26;
+    color: white;
+    border-radius: 12px;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.add-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.add-heading > span {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #493c34;
+    color: #c8946d;
+}
+
+.add-heading h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 19px;
+    font-weight: 500;
+}
+
+.add-heading p {
+    font-size: 9px;
+    color: #968d87;
+    margin-top: 2px;
+}
+
+/* Form */
+
+#bookForm {
+    display: flex;
+    gap: 8px;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+#bookForm input,
+#bookForm select {
+    width: 140px;
+    height: 40px;
+    padding: 0 11px;
+    background: #403832;
+    border: 1px solid #534941;
+    border-radius: 5px;
+    color: white;
+    outline: none;
+    font-size: 11px;
+}
+
+#bookForm input::placeholder {
+    color: #958b84;
+}
+
+#bookForm select option {
+    color: black;
+}
+
+#bookForm input:focus,
+#bookForm select:focus {
+    border-color: #c8946d;
+}
+
+#bookForm button {
+    height: 40px;
+    padding: 0 16px;
+    border: none;
+    background: #c8946d;
+    color: white;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#bookForm button:hover {
+    background: #dda47b;
+}
+
+/* =========================
+BOOKS
+========================= */
+
+.books-section {
+    min-height: 0;
+}
+
+.books-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    margin-bottom: 15px;
+}
+
+.books-top h2 {
+    font-family: "Playfair Display", serif;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+.books-top h2 span {
+    color: #b47b59;
+    font-style: italic;
+}
+
+/* Filters */
+
+.filters {
+    display: flex;
+    gap: 6px;
+}
+
+.filter {
+    background: transparent;
+    border: 1px solid #ddd5cc;
+    border-radius: 20px;
+    padding: 7px 13px;
+    color: #766d66;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+.filter.active,
+.filter:hover {
+    background: #302a26;
+    color: white;
+    border-color: #302a26;
+}
+
+/* =========================
+BOOK GRID
+========================= */
+
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.book-card {
+    background: white;
+    border: 1px solid #eae3db;
+    border-radius: 9px;
+    overflow: hidden;
+    transition: 0.25s;
+}
+
+.book-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(45, 35, 28, 0.09);
+}
+
+.book-image {
+    height: 115px;
+    background: linear-gradient(135deg, #e9d9ca, #f5eee7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+
+.book-details {
+    padding: 14px;
+}
+
+.book-category {
+    font-size: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: #f7eee7;
+    color: #a56e4c;
+    padding: 4px 8px;
+    border-radius: 15px;
+}
+
+.book-details h3 {
+    font-family: "Playfair Display", serif;
+    font-size: 17px;
+    margin-top: 9px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-author {
+    font-size: 10px;
+    color: #958d86;
+    margin-top: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.book-rating {
+    margin-top: 10px;
+    padding-top: 9px;
+    border-top: 1px solid #eee8e2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stars {
+    color: #c98b5e;
+    font-size: 13px;
+    letter-spacing: 1px;
+}
+
+.rating-number {
+    font-size: 9px;
+    color: #aaa29b;
+}
+
+/* =========================
+NO BOOKS
+========================= */
+
+.empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 40px;
+    color: #999;
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 1100px) {
+
+    .app {
+        grid-template-columns: 190px 1fr;
+    }
+
+    .main {
+        padding: 25px;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    #bookForm input,
+    #bookForm select {
+        width: 110px;
+    }
+}
+
+@media (max-width: 800px) {
+
+    body {
+        overflow-y: auto;
+    }
+
+    .app {
+        min-height: 100vh;
+        height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .search {
+        width: 100%;
+    }
+
+    .add-box {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    #bookForm {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+
+    #bookForm input,
+    #bookForm select {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .book-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+
+    .main {
+        padding: 20px 15px;
+    }
+
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .books-top {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}

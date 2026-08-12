@@ -1,0 +1,17 @@
+BOOKBLOOM - MONGODB INTEGRATION
+
+Frontend API base:
+http://localhost:5000
+
+Used endpoints:
+GET  /books
+GET  /books/search?q=...
+POST /books
+
+Start the backend first:
+node server.js
+
+Then open index.html with Live Server.
+
+The Add Book form now sends the new book to POST /books, so it is
+saved in MongoDB instead of only appearing temporarily in the browser.

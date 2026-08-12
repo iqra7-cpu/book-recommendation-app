@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BookBloom</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <span>✦</span>
+            BookBloom
+        </div>
+
+        <p class="tagline">
+            Your little corner<br>
+            of the reading world.
+        </p>
+
+        <div class="sidebar-book">
+            <div class="mini-book">
+                <span>✦</span>
+                <h3>READ<br>MORE</h3>
+                <small>BOOKBLOOM</small>
+            </div>
+        </div>
+
+        <div class="quote">
+            “A room without books<br>
+            is like a body without<br>
+            a soul.”
+        </div>
+
+        <div class="copyright">
+            © 2026 BookBloom
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main">
+
+        <!-- TOP -->
+
+        <div class="top">
+
+            <div>
+                <p class="eyebrow">WELCOME BACK, READER</p>
+
+                <h1>
+                    Find your next
+                    <span>favorite.</span>
+                </h1>
+            </div>
+
+            <div class="search">
+
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="search"
+                    placeholder="Search title, author..."
+                    onkeyup="searchBooks()"
+                >
+
+            </div>
+
+        </div>
+
+
+        <!-- ADD BOOK -->
+
+        <section class="add-box">
+
+            <div class="add-heading">
+                <span>✦</span>
+
+                <div>
+                    <h2>Add a book</h2>
+                    <p>Grow your personal collection</p>
+                </div>
+            </div>
+
+
+            <form id="bookForm">
+
+                <input
+                    type="text"
+                    id="title"
+                    placeholder="Book title"
+                    required
+                >
+
+                <input
+                    type="text"
+                    id="author"
+                    placeholder="Author"
+                    required
+                >
+
+                <select id="category" required>
+
+                    <option value="">Category</option>
+
+                    <option>Fiction</option>
+                    <option>Romance</option>
+                    <option>Fantasy</option>
+                    <option>Mystery</option>
+                    <option>Science Fiction</option>
+                    <option>Self Help</option>
+                    <option>Biography</option>
+
+                </select>
+
+
+                <select id="rating" required>
+
+                    <option value="">Rating</option>
+
+                    <option value="5">★★★★★</option>
+                    <option value="4">★★★★☆</option>
+                    <option value="3">★★★☆☆</option>
+                    <option value="2">★★☆☆☆</option>
+                    <option value="1">★☆☆☆☆</option>
+
+                </select>
+
+
+                <button type="submit">
+                    + Add
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- BOOKS -->
+
+        <section class="books-section">
+
+            <div class="books-top">
+
+                <div>
+                    <p class="eyebrow">YOUR COLLECTION</p>
+
+                    <h2>Recommended <span>reads</span></h2>
+                </div>
+
+
+                <div class="filters">
+
+                    <button
+                        class="filter active"
+                        onclick="filterBooks('All', this)">
+                        All
+                    </button>
+
+                    <button
+                        class="filter"
+                        onclick="filterBooks('Fiction', this)">
+                        Fiction
+                    </button>
+
+                    <button
+                        class="filter"
+                        onclick="filterBooks('Romance', this)">
+                        Romance
+                    </button>
+
+                    <button
+                        class="filter"
+                        onclick="filterBooks('Fantasy', this)">
+                        Fantasy
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- BOOK CARDS -->
+
+            <div id="bookList" class="book-grid"></div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
