@@ -71,17 +71,18 @@
                 </h1>
             </div>
 
-            <div class="search">
-
-                <span>⌕</span>
-
-                <input
-                    type="text"
-                    id="search"
-                    placeholder="Search title, author..."
-                    onkeyup="searchBooks()"
-                >
-
+            <div class="top-actions">
+                <div class="search">
+                    <span>⌕</span>
+                    <input
+                        type="text"
+                        id="search"
+                        placeholder="Search title, author..."
+                        onkeyup="searchBooks()"
+                    >
+                </div>
+                <a class="profile-button" href="profile.html">Profile</a>
+                <button id="logoutButton" class="logout-button" type="button">Log out</button>
             </div>
 
         </div>
@@ -128,19 +129,6 @@
                     <option>Science Fiction</option>
                     <option>Self Help</option>
                     <option>Biography</option>
-
-                </select>
-
-
-                <select id="rating" required>
-
-                    <option value="">Rating</option>
-
-                    <option value="5">★★★★★</option>
-                    <option value="4">★★★★☆</option>
-                    <option value="3">★★★☆☆</option>
-                    <option value="2">★★☆☆☆</option>
-                    <option value="1">★☆☆☆☆</option>
 
                 </select>
 
@@ -206,6 +194,42 @@
 
     </main>
 
+</div>
+
+<div id="reviewModal" class="review-modal" hidden>
+    <div class="review-backdrop" data-close-review></div>
+    <section class="review-dialog" role="dialog" aria-modal="true" aria-labelledby="reviewBookTitle">
+        <button id="closeReviewButton" class="review-close" type="button" aria-label="Close reviews">×</button>
+
+        <p class="eyebrow">BOOK COMMUNITY</p>
+        <h2 id="reviewBookTitle">Book reviews</h2>
+        <p id="reviewBookAuthor" class="review-book-author"></p>
+
+        <div class="review-summary">
+            <div id="reviewAverage" class="review-average">—</div>
+            <div>
+                <div id="reviewAverageStars" class="stars">☆☆☆☆☆</div>
+                <p id="reviewCount" class="review-count">No user ratings yet</p>
+            </div>
+        </div>
+
+        <form id="reviewForm" class="review-form">
+            <label class="review-label">Your rating</label>
+            <div id="starPicker" class="star-picker" role="radiogroup" aria-label="Choose a rating"></div>
+            <label class="review-label" for="reviewComment">Your review</label>
+            <textarea id="reviewComment" maxlength="1000" placeholder="What did you think?" required></textarea>
+            <div class="review-form-footer">
+                <p id="reviewMessage" class="review-message" role="alert"></p>
+                <button id="reviewSubmit" class="review-submit" type="submit">Save review</button>
+            </div>
+        </form>
+
+        <div class="reviews-heading">
+            <h3>Reader reviews</h3>
+            <span id="reviewListCount"></span>
+        </div>
+        <div id="reviewsList" class="reviews-list"></div>
+    </section>
 </div>
 
 

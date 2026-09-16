@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Profile | BookBloom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <main class="profile-shell">
+        <aside class="profile-sidebar">
+            <a class="profile-logo" href="index.html"><span>✦</span> BookBloom</a>
+            <div class="profile-sidebar-copy">
+                <p class="eyebrow">YOUR READING WORLD</p>
+                <h1>A little space for <span>you.</span></h1>
+                <p>Keep your account details close while you find your next favorite story.</p>
+            </div>
+            <p class="profile-quote">“Books are a uniquely portable magic.”</p>
+        </aside>
+
+        <section class="profile-main">
+            <nav class="profile-nav" aria-label="Profile navigation">
+                <a class="back-link" href="index.html">← Back to BookBloom</a>
+                <button id="logoutButton" class="profile-logout" type="button">Log out</button>
+            </nav>
+
+            <div class="profile-content">
+                <div class="profile-heading">
+                    <p class="eyebrow">ACCOUNT PROFILE</p>
+                    <h2>Your profile</h2>
+                    <p>Here are the details connected to your BookBloom account.</p>
+                </div>
+
+                <section id="profileCard" class="profile-card" aria-live="polite">
+                    <div class="profile-avatar" id="profileInitials">—</div>
+                    <div class="profile-details">
+                        <div class="profile-field">
+                            <span class="field-label">Name</span>
+                            <strong id="profileName">Loading...</strong>
+                        </div>
+                        <div class="profile-field">
+                            <span class="field-label">Email address</span>
+                            <strong id="profileEmail">Loading...</strong>
+                        </div>
+                        <div class="profile-field">
+                            <span class="field-label">Account</span>
+                            <strong>BookBloom reader</strong>
+                        </div>
+                        <div class="profile-field">
+                            <span class="field-label">Member since</span>
+                            <strong id="profileCreatedAt">Loading...</strong>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="my-books-section" aria-labelledby="myBooksHeading">
+                    <div class="my-books-heading">
+                        <div>
+                            <p class="eyebrow">YOUR CONTRIBUTIONS</p>
+                            <h3 id="myBooksHeading">My Books</h3>
+                        </div>
+                        <span id="myBooksCount" class="my-books-count"></span>
+                    </div>
+                    <div id="myBooksList" class="my-books-list" aria-live="polite"></div>
+                </section>
+
+                <p id="profileMessage" class="profile-message" role="alert"></p>
+            </div>
+        </section>
+    </main>
+    <script src="profile.js"></script>
+</body>
+</html>

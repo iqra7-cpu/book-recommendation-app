@@ -16,6 +16,13 @@ const bookSchema = new mongoose.Schema({
         required: true
     },
 
+    createdBy: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "User",
+        required: false,
+        default: undefined
+    },
+
     rating: {
         type: Number,
         default: 0

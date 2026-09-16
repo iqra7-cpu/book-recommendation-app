@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Join BookBloom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body data-auth-mode="signup">
+    <main class="auth-shell">
+        <section class="auth-showcase">
+            <div class="auth-logo"><span>✦</span> BookBloom</div>
+            <div class="auth-copy">
+                <p class="eyebrow">MAKE ROOM FOR MORE</p>
+                <h1>Your next great read is <span>waiting.</span></h1>
+                <p>Build a collection that feels like you, one thoughtful recommendation at a time.</p>
+            </div>
+            <p class="auth-quote">“A room without books is like a body without a soul.”</p>
+        </section>
+        <section class="auth-panel">
+            <div class="auth-form-wrap">
+                <p class="eyebrow">START YOUR COLLECTION</p>
+                <h2>Create account</h2>
+                <p class="auth-subtitle">Join BookBloom and keep your recommendations close.</p>
+                <form id="authForm" class="auth-form" novalidate>
+                    <label class="field">
+                        <span>Your name</span>
+                        <input type="text" name="name" autocomplete="name" placeholder="How should we call you?" required>
+                    </label>
+                    <label class="field">
+                        <span>Email address</span>
+                        <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                    </label>
+                    <label class="field">
+                        <span>Password</span>
+                        <input type="password" name="password" autocomplete="new-password" placeholder="At least 8 characters" required>
+                    </label>
+                    <button class="auth-submit" type="submit">Create account</button>
+                    <p id="authMessage" class="auth-message" role="alert"></p>
+                </form>
+                <p class="auth-switch">Already have an account? <a href="login.html">Log in</a></p>
+            </div>
+        </section>
+    </main>
+    <script src="auth.js"></script>
+</body>
+</html>

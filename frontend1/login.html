@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log in | BookBloom</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+</head>
+<body data-auth-mode="login">
+    <main class="auth-shell">
+        <section class="auth-showcase">
+            <div class="auth-logo"><span>✦</span> BookBloom</div>
+            <div class="auth-copy">
+                <p class="eyebrow">A QUIET PLACE TO READ</p>
+                <h1>Come back to your favorite <span>stories.</span></h1>
+                <p>Your personal shelf for discovering books worth making room for.</p>
+            </div>
+            <p class="auth-quote">“There is no friend as loyal as a book.”</p>
+        </section>
+        <section class="auth-panel">
+            <div class="auth-form-wrap">
+                <p class="eyebrow">WELCOME BACK, READER</p>
+                <h2>Log in</h2>
+                <p class="auth-subtitle">Pick up where your reading life left off.</p>
+                <form id="authForm" class="auth-form" novalidate>
+                    <label class="field">
+                        <span>Email address</span>
+                        <input type="email" name="email" autocomplete="email" placeholder="you@example.com" required>
+                    </label>
+                    <label class="field">
+                        <span>Password</span>
+                        <input type="password" name="password" autocomplete="current-password" placeholder="At least 8 characters" required>
+                    </label>
+                    <button class="auth-submit" type="submit">Sign in</button>
+                    <p id="authMessage" class="auth-message" role="alert"></p>
+                </form>
+                <p class="auth-switch">New to BookBloom? <a href="signup.html">Create an account</a></p>
+            </div>
+        </section>
+    </main>
+    <script src="auth.js"></script>
+</body>
+</html>
